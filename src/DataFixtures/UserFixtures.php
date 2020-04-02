@@ -19,12 +19,9 @@ class UserFixtures extends Fixture
     {
         $user = new User();
 
-        $user->setEmail('remi.rucojevic@gmail.com');
-        $user->setLogin('Rwemi');
-        $user->setPassword($this->passwordEncoder->encodePassword(
-            $user,
-            'mdp'
-        ));
+        $user->setEmail('user@reporn.com');
+        $user->setLogin('Sam Troulecul');
+        $user->setPassword(password_hash('mdp', PASSWORD_BCRYPT));
 
         $manager->persist($user);
         $manager->flush();
