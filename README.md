@@ -20,6 +20,14 @@ Create database :
 
     php bin/console doctrine:database:create
     
+Create tables :
+
+    php bin/console doctrine:schema:update --force
+    
 Load users :
 
     php bin/console doctrine:fixtures:load
+
+### Launch the project :
+
+    php -S localhost:3000 -t public
